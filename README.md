@@ -1,4 +1,4 @@
-# Glass Case 🎁💰
+# Glass Case 🎁💰 [![Build Status](https://travis-ci.org/tryshchenko/glass-case.svg?branch=master)](https://travis-ci.org/tryshchenko/glass-case)
 
 Glass Case is a library which allows you to build your own *serverless* store in minutes.
 It uses _google spreadsheet_ as a database and https://formspree.io/ as a contact form to process orders.
