@@ -1,0 +1,17 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-4">
+      <h1 class="logo">
+        <span class="badge badge-danger" [routerLink]="['/products']">
+          🤘 Music Shop
+        </span>
+      </h1>
+    </div>
+    <div class="col-md-8">
+      <div class="alert alert-light text-right">
+        <span *ngIf="!cart.amount && !cart.price">Cart is empty</span>
+        <span class="btn btn-primary" *ngIf="cart.price > 0 || cart.amount > 0" [routerLink]="['/cart']">You selected {{cart.amount}} items for price {{cart.price}}</span>
+      </div>
+    </div>
+  </div>
+</div>

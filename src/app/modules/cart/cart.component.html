@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row" *ngIf="products.length > 0">
+    <app-cart-products [products]="products" class="col-md-6 mt-4" (onProductRemove)="onProductRemove($event)"></app-cart-products>
+    <app-cart-form [products]="products" class="col-md-6 mt-4"></app-cart-form>
+  </div>
+
+  <div class="row" *ngIf="products.length === 0">
+    <div class="col-md-12 mt-5">
+      <h1>Your cart is empty</h1>
+      <a class="btn btn-lg btn-primary mt-3" [routerLink]="['/products']">Come to shopping</a>
+    </div>
+  </div>
+</div>

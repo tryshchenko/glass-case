@@ -1,0 +1,8 @@
+<ul class="list-group mt-2">
+  <li class="list-group-item" [class.active]="!activeCategory" (click)="onChange()">
+    Show all products
+  </li>
+  <li class="list-group-item" *ngFor="let category of categories" (click)="onChange(category)" [class.active]="activeCategory == category">
+    {{category}}
+  </li>
+</ul>

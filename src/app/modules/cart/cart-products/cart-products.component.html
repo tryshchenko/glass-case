@@ -1,0 +1,22 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th>Total Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{product.name}}</td>
+        <td>{{product.amount}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.price * product.amount}}</td>
+        <td><span class="btn btn-danger" (click)="onRemove(product)">Remove</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

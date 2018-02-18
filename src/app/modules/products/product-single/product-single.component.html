@@ -1,0 +1,11 @@
+<div class="card mt-5">
+  <img class="card-img-top" src="{{product.picture}}" alt="No image provided">
+  <div class="card-body">
+    <h3>{{product.name}}</h3>
+    <p>{{product.image}}</p>
+    <i>Price: {{price(product.price)}}</i>
+    <p>{{trim(product.description)}}</p>
+
+    <button type="button" class="btn btn-success" (click)="addToCart(product)">💰 Buy Now</button>
+  </div>
+</div>
