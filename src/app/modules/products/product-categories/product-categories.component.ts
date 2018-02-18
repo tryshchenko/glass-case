@@ -6,18 +6,14 @@ import { uniq } from 'ramda';
   templateUrl: './product-categories.component.html',
   styleUrls: ['./product-categories.component.css']
 })
-export class ProductCategoriesComponent implements OnInit {
+export class ProductCategoriesComponent {
   @Input() products: any[] = [];
   @Input() activeCategory?: string;
   @Output() onCategoryChange: EventEmitter<any> = new EventEmitter();
 
-  private categories: string[] = [];
+  public categories: string[] = [];
 
   constructor() { }
-
-  ngOnInit() {
-
-  }
 
   ngOnChanges() {
     const raw = this.products.map(product => product.category);
@@ -25,7 +21,7 @@ export class ProductCategoriesComponent implements OnInit {
     this.categories = uniq(raw);
   }
 
-  onChange(category) {
+  onChange(category?: string) {
     this.activeCategory = category;
     this.onCategoryChange.emit(category);
   }

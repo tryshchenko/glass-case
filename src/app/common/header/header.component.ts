@@ -8,7 +8,7 @@ import { CartService } from '../../services/cart.service';
 })
 export class HeaderComponent implements OnInit {
 
-  private cart: any = {};
+  public cart: any = {};
 
   constructor(private cartService: CartService) { }
 

@@ -8,7 +8,7 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartComponent implements OnInit {
 
-  private products: any = {};
+  public products: any = {};
 
   constructor(private cartService: CartService) {
     this.cartService.updateEmitter.subscribe(products => this.products = products);

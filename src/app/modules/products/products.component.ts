@@ -8,9 +8,9 @@ import { SourceService } from '../../services/source.service';
 })
 export class ProductsComponent implements OnInit {
 
-  private productsOriginal: any[] = [];
-  private products: any[] = [];
-  private category?: string;
+  public productsOriginal: any[] = [];
+  public products: any[] = [];
+  public category?: string;
 
   constructor(private sourceService: SourceService) { }
 
